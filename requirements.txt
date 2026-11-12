@@ -1,0 +1,26 @@
+
+# BacilliNet12 - requirements
+# Python >= 3.10
+#
+# Install PyTorch first with the CUDA build that matches your GPU,
+# following https://pytorch.org/get-started/locally/
+# (NVIDIA RTX 50-series GPUs require a PyTorch build with CUDA 12.8 or newer.)
+# Then install the remaining packages:
+#   pip install -r requirements.txt
+
+# Deep learning
+torch>=2.7.0
+torchvision>=0.22.0
+ultralytics>=8.3.78        # first release with YOLO12 support
+
+# Image preprocessing and evaluation
+opencv-python>=4.8.0
+numpy>=1.24.0
+pillow>=10.0.0
+
+# Visualization and result tables
+matplotlib>=3.7.0
+pandas>=2.0.0
+
+# Configuration files
+pyyaml>=6.0

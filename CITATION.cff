@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+message: "If you use this software or the pre-trained models, please cite it as below."
+title: "BacilliNet12: An Enhanced YOLO12 for Bacilli Detection and Counting in Sputum Smear Images"
+type: software
+authors:
+  - family-names: Arifin
+    given-names: Samsul
+    affiliation: "Department of Informatics, Institut Teknologi Sepuluh Nopember, Surabaya, Indonesia"
+  - family-names: Fatichah
+    given-names: Chastine
+    affiliation: "Department of Informatics, Institut Teknologi Sepuluh Nopember, Surabaya, Indonesia"
+  - family-names: Yuniarti
+    given-names: Anny
+    affiliation: "Department of Informatics, Institut Teknologi Sepuluh Nopember, Surabaya, Indonesia"
+  - family-names: Yuniarti
+    given-names: Heny
+  - family-names: Sigit
+    given-names: Riyanto
+repository-code: "https://github.com/samsulchin/BacilliNet12-An-Enhanced-YOLO12-for-Bacilli-Detection-and-Counting-in-Sputum-Smear-Images"
+license: AGPL-3.0
+version: 1.0.0
+date-released: 2026-11-12
+keywords:
+  - tuberculosis
+  - acid-fast bacilli
+  - object detection
+  - small object detection
+  - YOLO12
+  - SPD-Conv
+  - P2 detection head
+  - bacilli counting
+  - sputum smear microscopy
+preferred-citation:
+  type: article
+  title: "BacilliNet12: An Enhanced YOLO12 with SPD-Conv and P2 Detection Head for Tuberculosis Bacilli Detection and Counting in Sputum Smear Images"
+  authors:
+    - family-names: Arifin
+      given-names: Samsul
+    - family-names: Fatichah
+      given-names: Chastine
+    - family-names: Yuniarti
+      given-names: Anny
+    - family-names: Yuniarti
+      given-names: Heny
+    - family-names: Sigit
+      given-names: Riyanto
+  journal: "International Journal of Intelligent Engineering and Systems"
+  year: 2026
+  notes: "Under review"

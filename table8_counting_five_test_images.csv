@@ -1,0 +1,25 @@
+Model,Image,Ground truth,N_pred,e_i (N_pred - N_gt),TP,FP,FN
+Standard YOLO12n,Image 1,22,18,-4,18,0,4
+Standard YOLO12n,Image 2,23,17,-6,17,0,6
+Standard YOLO12n,Image 3,10,10,0,10,0,0
+Standard YOLO12n,Image 4,17,15,-2,15,0,2
+Standard YOLO12n,Image 5,9,14,+5,9,5,0
+Standard YOLO12n,Total,81,74,MAE = 3.40,69,5,12
+YOLO12n + SPD-Conv,Image 1,22,21,-1,21,0,1
+YOLO12n + SPD-Conv,Image 2,23,22,-1,22,0,1
+YOLO12n + SPD-Conv,Image 3,10,10,0,10,0,0
+YOLO12n + SPD-Conv,Image 4,17,12,-5,11,1,6
+YOLO12n + SPD-Conv,Image 5,9,8,-1,8,0,1
+YOLO12n + SPD-Conv,Total,81,73,MAE = 1.60,72,1,9
+YOLO12n + P2 head,Image 1,22,22,0,22,0,0
+YOLO12n + P2 head,Image 2,23,23,0,23,0,0
+YOLO12n + P2 head,Image 3,10,10,0,10,0,0
+YOLO12n + P2 head,Image 4,17,17,0,17,0,0
+YOLO12n + P2 head,Image 5,9,8,-1,6,2,3
+YOLO12n + P2 head,Total,81,80,MAE = 0.20,78,2,3
+BacilliNet12,Image 1,22,22,0,22,0,0
+BacilliNet12,Image 2,23,23,0,23,0,0
+BacilliNet12,Image 3,10,11,+1,10,1,0
+BacilliNet12,Image 4,17,17,0,17,0,0
+BacilliNet12,Image 5,9,9,0,9,0,0
+BacilliNet12,Total,81,82,MAE = 0.20,81,1,0

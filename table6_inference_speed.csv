@@ -1,0 +1,25 @@
+Scenario,Architecture,Preprocessing,Pre (ms),Inference (ms),Post (ms),Total (ms),FPS
+S1,Standard YOLO12n,Raw,0.80,12.33,1.00,14.13,70.77
+S2,Standard YOLO12n,Median,0.71,11.39,0.96,13.06,76.57
+S3,Standard YOLO12n,CLAHE,0.75,12.01,0.98,13.74,72.78
+S4,Standard YOLO12n,CIELAB,0.74,11.50,1.01,13.25,75.47
+S5,Standard YOLO12n,Median + CLAHE,0.74,12.04,0.99,13.77,72.62
+S6,Standard YOLO12n,Full (Median + CLAHE + CIELAB),0.76,11.57,0.94,13.27,75.36
+S7,YOLO12n + SPD-Conv,Raw,0.78,10.19,0.96,11.93,83.82
+S8,YOLO12n + SPD-Conv,Median,0.73,9.88,0.95,11.56,86.51
+S9,YOLO12n + SPD-Conv,CLAHE,0.77,10.80,1.01,12.58,79.49
+S10,YOLO12n + SPD-Conv,CIELAB,0.78,10.93,1.00,12.71,78.68
+S11,YOLO12n + SPD-Conv,Median + CLAHE,0.76,9.75,0.95,11.46,87.26
+S12,YOLO12n + SPD-Conv,Full (Median + CLAHE + CIELAB),0.71,9.88,0.97,11.56,86.51
+S13,YOLO12n + P2 head,Raw,0.74,11.27,0.97,12.98,77.04
+S14,YOLO12n + P2 head,Median,0.76,11.10,0.98,12.84,77.88
+S15,YOLO12n + P2 head,CLAHE,0.76,11.37,1.06,13.19,75.82
+S16,YOLO12n + P2 head,CIELAB,0.73,11.50,0.97,13.20,75.76
+S17,YOLO12n + P2 head,Median + CLAHE,0.71,10.82,1.03,12.56,79.62
+S18,YOLO12n + P2 head,Full (Median + CLAHE + CIELAB),0.78,11.17,0.94,12.89,77.58
+S19,BacilliNet12 (SPD-Conv + P2 head),Raw,0.75,11.27,1.02,13.04,76.69
+S20,BacilliNet12 (SPD-Conv + P2 head),Median,0.72,11.29,0.97,12.98,77.04
+S21,BacilliNet12 (SPD-Conv + P2 head),CLAHE,0.71,10.86,0.96,12.53,79.81
+S22,BacilliNet12 (SPD-Conv + P2 head),CIELAB,0.71,10.87,0.96,12.54,79.74
+S23,BacilliNet12 (SPD-Conv + P2 head),Median + CLAHE,0.75,11.25,1.03,13.03,76.75
+S24,BacilliNet12 (SPD-Conv + P2 head),Full (Median + CLAHE + CIELAB),0.73,10.98,0.99,12.70,78.74

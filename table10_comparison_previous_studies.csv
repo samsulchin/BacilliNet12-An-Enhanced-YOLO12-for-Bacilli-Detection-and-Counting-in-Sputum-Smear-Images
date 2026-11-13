@@ -1,0 +1,17 @@
+Group,Ref.,Method,Dataset,mAP50 (%),mAP50-95 (%),Precision (%),Recall (%)
+A. Same dataset,[42],YOLOv10s,"Primary, 1,438 images",89.03,,87.91,87.14
+A. Same dataset,[2],YOLOv11s + P2 head + Median-CLAHE-CIELAB,"Primary, 1,438 images",93.10,57.85,92.75,93.00
+A. Same dataset,Proposed,BacilliNet12 + Median-CLAHE-CIELAB,"Primary, 1,438 images",94.05,43.71,90.58,91.47
+B. Different dataset,[11],RetinaNet (ResNet-152),"Public, 928 images",79.40,,67.10,86.56
+B. Different dataset,[21],DA-YOLO (YOLOv5s),"Public, 126 images",87.60,40.70,81.00,80.00
+B. Different dataset,[34],YOLOv5s,"Public + hospital, 1,210 images",84.00,,74.00,78.00
+B. Different dataset,[13],YOLOv5,"Private, 1,265 images",84.74,,87.31,
+B. Different dataset,[16],YOLOv8,"Private, 213 images",87.00,,88.00,77.00
+B. Different dataset,[15],Lite-YOLOv8,"Public, 1,265 images",86.30,43.60,77.70,81.90
+B. Different dataset,[38],MTB-YOLO (YOLOv8s + LAE),"Public, 1,265 images",86.70,44.50,,
+B. Different dataset,[39],DSE-YOLOv8 (C2f-DCNv3),"Public, 1,265 images",88.10,,,
+B. Different dataset,[17],YOLOv9c-PES (P2 + EMA + SIoU),"Private, 286 images",89.20,42.20,86.20,85.40
+B. Different dataset,[14],YOLOv7-Lite,"Public, 728 images",87.20,50.50,84.00,86.00
+B. Different dataset,[18],ICS-YOLOv10,"8,855 images",97.33,,92.81,92.55
+B. Different dataset,[41],Mod-YOLOv10 (RepVGG),"Private, 31,300 patches",83.21,,97.50,97.50
+B. Different dataset,[33],RT-DETR (EfficientNet-B0),"Combined public, 4,300 images",92.50,,82.80,84.80

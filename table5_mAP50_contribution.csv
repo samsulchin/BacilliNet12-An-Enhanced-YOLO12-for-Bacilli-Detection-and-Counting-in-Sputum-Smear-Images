@@ -1,0 +1,5 @@
+Architecture,Raw mAP50 (%),Delta architecture (Raw),Full mAP50 (%),Delta architecture (Full),Delta preprocessing
+Standard YOLO12n,84.54,,89.64,,+5.10
+YOLO12n + P2 head,85.52,+0.98,91.02,+1.38,+5.50
+YOLO12n + SPD-Conv,87.82,+3.28,92.05,+2.41,+4.23
+BacilliNet12,89.99,+5.45,94.05,+4.41,+4.06

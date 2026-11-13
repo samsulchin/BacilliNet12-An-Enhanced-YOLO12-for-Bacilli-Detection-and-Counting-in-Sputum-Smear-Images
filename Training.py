@@ -59,10 +59,10 @@ TRAIN_ARGS = dict(
 # -----------------------------------------------------------------------------
 ARCHITECTURES: List[Tuple[str, str]] = [
     # (short name, architecture YAML file inside --cfg-dir)
-    ("YOLO12n",      "yolov12-standar.yaml"),
-    ("SPD",          "yolov12-tb-spd-only.yaml"),
-    ("P2",           "yolov12-tb-p2-only.yaml"),
-    ("BacilliNet12", "yolov12-tb-custom.yaml"),
+    ("YOLO12n",      "yolo12n-standard.yaml"),
+    ("SPD",          "yolo12n-spd.yaml"),
+    ("P2",           "yolo12n-p2.yaml"),
+    ("BacilliNet12", "bacillinet12.yaml"),
 ]
 
 INPUT_VARIANTS: List[Tuple[str, str]] = [

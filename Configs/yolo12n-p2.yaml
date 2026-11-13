@@ -1,0 +1,46 @@
+# YOLO12n + P2 detection head (Scenarios S13-S18)
+# An additional high-resolution detection head at P2/4 (stride 4) is added.
+# Detection at four scales: P2/4, P3/8, P4/16, P5/32.
+# Original file name in the experiments: yolov12-tb-p2-only.yaml
+
+nc: 1  # number of classes (bacilli)
+scales:
+  # [depth, width, max_channels]
+  n: [0.50, 0.25, 1024]
+
+backbone:
+  # [from, repeats, module, args]
+  - [-1, 1, Conv, [64, 3, 2]]      # 0  P1/2  strided convolution
+  - [-1, 1, Conv, [128, 3, 2]]     # 1  P2/4  strided convolution
+  - [-1, 2, C3k2, [128, True]]     # 2
+  - [-1, 1, Conv, [256, 3, 2]]     # 3  P3/8
+  - [-1, 2, C3k2, [256, True]]     # 4
+  - [-1, 1, Conv, [512, 3, 2]]     # 5  P4/16
+  - [-1, 2, A2C2f, [512, True]]    # 6  area attention
+  - [-1, 1, Conv, [1024, 3, 2]]    # 7  P5/32
+  - [-1, 2, A2C2f, [1024, True]]   # 8  area attention
+
+head:
+  # Top-down pathway (FPN), extended down to P2
+  - [-1, 1, nn.Upsample, [None, 2, 'nearest']]  # 9
+  - [[-1, 6], 1, Concat, [1]]                   # 10 concat with backbone P4
+  - [-1, 2, A2C2f, [512]]                       # 11
+  - [-1, 1, nn.Upsample, [None, 2, 'nearest']]  # 12
+  - [[-1, 4], 1, Concat, [1]]                   # 13 concat with backbone P3
+  - [-1, 2, C3k2, [256, False]]                 # 14
+  - [-1, 1, nn.Upsample, [None, 2, 'nearest']]  # 15
+  - [[-1, 2], 1, Concat, [1]]                   # 16 concat with backbone P2
+  - [-1, 2, C3k2, [128, False]]                 # 17 P2/4 output (new high-resolution level)
+
+  # Bottom-up pathway (PAN)
+  - [-1, 1, Conv, [256, 3, 2]]                  # 18
+  - [[-1, 14], 1, Concat, [1]]                  # 19
+  - [-1, 2, C3k2, [256, False]]                 # 20 P3/8 output
+  - [-1, 1, Conv, [512, 3, 2]]                  # 21
+  - [[-1, 11], 1, Concat, [1]]                  # 22
+  - [-1, 2, A2C2f, [512]]                       # 23 P4/16 output
+  - [-1, 1, Conv, [1024, 3, 2]]                 # 24
+  - [[-1, 8], 1, Concat, [1]]                   # 25
+  - [-1, 2, C3k2, [1024, True]]                 # 26 P5/32 output
+
+  - [[17, 20, 23, 26], 1, Detect, [nc]]         # 27 Detect(P2, P3, P4, P5)

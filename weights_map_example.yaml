@@ -1,0 +1,35 @@
+# Example weights map for benchmark_speed.py
+# Maps each scenario (S1-S24) to the best.pt of its training run.
+# Edit the paths to match the location of your own runs.
+
+# Standard YOLO12n (S1-S6)
+S1:  runs/detect/Tesis_Tabel_Bab4/Exp1_Baseline_Fix-2/weights/best.pt
+S2:  runs/detect/Tesis_Tabel_Bab4/Exp2_Median-2/weights/best.pt
+S3:  runs/detect/Tesis_Tabel_Bab4/Exp3_Clahe-2/weights/best.pt
+S4:  runs/detect/Tesis_Tabel_Bab4/Exp4_Cielab-2/weights/best.pt
+S5:  runs/detect/Tesis_Tabel_Bab4/Exp5_MedianClahe-2/weights/best.pt
+S6:  runs/detect/Tesis_Tabel_Bab4/Exp6_FullBoost-2/weights/best.pt
+
+# YOLO12n + SPD-Conv (S7-S12)
+S7:  runs/detect/Tesis_Ablasi_Raw/Exp_SPDOnly_Raw/weights/best.pt
+S8:  runs/detect/Tesis_Ablasi_Ekstensif/Exp_SPDOnly_Median/weights/best.pt
+S9:  runs/detect/Tesis_Ablasi_Ekstensif/Exp_SPDOnly_Clahe/weights/best.pt
+S10: runs/detect/Tesis_Ablasi_Ekstensif/Exp_SPDOnly_Cielab/weights/best.pt
+S11: runs/detect/Tesis_Ablasi_Ekstensif/Exp_SPDOnly_MedClahe/weights/best.pt
+S12: runs/detect/Tesis_Ablasi_Ekstensif/Exp_SPDOnly_FullBoost/weights/best.pt
+
+# YOLO12n + P2 head (S13-S18)
+S13: runs/detect/Tesis_Ablasi_Raw/Exp_P2Only_Raw/weights/best.pt
+S14: runs/detect/Tesis_Ablasi_Ekstensif/Exp_P2Only_Median/weights/best.pt
+S15: runs/detect/Tesis_Ablasi_Ekstensif/Exp_P2Only_Clahe/weights/best.pt
+S16: runs/detect/Tesis_Ablasi_Ekstensif/Exp_P2Only_Cielab/weights/best.pt
+S17: runs/detect/Tesis_Ablasi_Ekstensif/Exp_P2Only_MedClahe/weights/best.pt
+S18: runs/detect/Tesis_Ablasi_Ekstensif/Exp_P2Only_FullBoost/weights/best.pt
+
+# BacilliNet12 (S19-S24)
+S19: runs/detect/Tesis_Ablasi_Raw/Exp_Proposed_Raw/weights/best.pt
+S20: runs/detect/Tesis_Ablasi_Ekstensif/Exp_Proposed_Median/weights/best.pt
+S21: runs/detect/Tesis_Ablasi_Ekstensif/Exp_Proposed_Clahe/weights/best.pt
+S22: runs/detect/Tesis_Ablasi_Ekstensif/Exp_Proposed_Cielab/weights/best.pt
+S23: runs/detect/Tesis_Ablasi_Ekstensif/Exp_Proposed_MedClahe/weights/best.pt
+S24: runs/detect/Tesis_Ablasi_Ekstensif/Exp_Proposed_FullBoost/weights/best.pt

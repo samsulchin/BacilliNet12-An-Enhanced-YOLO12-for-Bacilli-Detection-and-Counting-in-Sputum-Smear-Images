@@ -14,7 +14,7 @@ For each seed, two summaries are produced:
 
 Examples:
     python stability_seeds.py --data /path/to/DATASET_FULL_BOOST/data_preprocessed.yaml \
-                              --cfg ../configs/yolov12-tb-custom.yaml
+                              --cfg ../configs/bacillinet12.yaml
 
     python stability_seeds.py --data ... --cfg ... --eval-test
 """
